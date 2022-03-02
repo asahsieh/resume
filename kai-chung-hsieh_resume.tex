@@ -101,13 +101,22 @@
   }
 }
 
-\newcommand{\resumeSubheading}[4]{
+%\newcommand{\resumeSubheading}[4]{
+%  \vspace{-2pt}\item
+%    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+%      \textbf{\large#1} & \textbf{\small #2} \\
+%      {\large#3} & \textit{\small #4} \\
+%      
+%    \end{tabular*}\vspace{-7pt}
+%}
+
+\newcommand{\resumeSubheading}[3]{
   \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{\large#1} & \textbf{\small #2} \\
-      {\large#3} & \textit{\small #4} \\
+      {\large#3} \\
       
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -161,7 +170,7 @@
 
 %-----------OBJECTIVE-----------
 \section{OBJECTIVE}
-    {Digital Verification (DV) engineer with 7 years of experience on in Digital Home Center, seeking jobs related to \textbf{CPU} (listed by expected order):}
+    {Digital Verification (DV) engineer with 7 years of experience working on Media Processor SoCs, seeking jobs related to \textbf{CPU} (listed by expected order):}
         \resumeItemListStart
             \resumeItem{\normalsize{CPU Performance Architect \href{https://careers.google.com/jobs/results/106694213048902342/}{\raisebox{-0.1\height}\faExternalLink }}}
             \vspace{-5pt}
@@ -171,19 +180,27 @@
         \resumeItemListEnd
     \vspace{-6pt}
      
-
+% TODO
 %-----------PROGRAMMING SKILLS-----------
 \section{TECHNICAL SKILLS}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{\normalsize{Languages:}}{ \normalsize{Python, Java, C, C++, Dart, JavaScript, SQL, NoSQL, R, XML, Go}} \\
-     \textbf{\normalsize{Developer Tools:}}{ \normalsize{VS Code, Android Studio, DataGrip, Goland, Intellij Idea Ultimate}} \\
-     \textbf{\normalsize{Technologies/Frameworks:}}{\normalsize{ Linux, GitHub, ReactJS, Redux, NextJS, NodeJS, ExpressJS, Git, Mongo, Flutter}} \\
+     \textbf{\normalsize{Languages:}}{ \normalsize{SystemVerilog, Verilog, C/C++, Arm assembly, Shell scripting, Perl, java}} \\
+     \textbf{\normalsize{Simulators/Tools:}}{ \normalsize{VCS, NC-Verilog, Design compiler, Verdi, SimVision}} \\
+     \textbf{\normalsize{Technologies/Frameworks:}}{ \normalsize{UVM, VMM, SVN, Linux}} \\
     }}
  \end{itemize}
- \vspace{-15pt}
+ \vspace{-4pt}
+ {{\textbf{\large{Currently learned}}}}
+ \vspace{-4pt}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     {\normalsize{RISC-V assembly, Ripes simulator, git, Linux kernel, Python}}
+    }}
+ \end{itemize}
+ \vspace{-14pt}
  
- 
+
 %-----------EXPERIENCE-----------
 \section{WORK EXPERIENCE}
   \vspace{-5pt}
@@ -202,15 +219,23 @@
         {Promotion from junior to senior engineer: Sep 2018}
         \vspace{-5pt}
         \resumeItemListStart
-            \resumeItem{Worked on the DV department in CNBU of various Digital Home Center products\newline(e.g., \textbf{Set-up box}, \textbf{NAS}, etc)}
-            \resumeItem{Verified High-Speed peripherals \textbf{USB} and \textbf{Ethernet} modules and on 6 projects,\newline USB module supports speeds from USB 1.0 to 3.0 and both of Host/Device roles and\newline Ethernet module supports different media-independent interfaces include MII/GMII/RMII/RGMII;\newline the testbenches for the two modules are implemented by SystemVerilog VMM/UVM methodologies}
-            \resumeItem{Worked with Hardware System Designer to verify ROM code on USB mode, including correctness of\newline passing the hardware security to enable USB boot, following mass storage protocol between PC host\newline and USB module, and writing USB data to different flash types or DDR}
-            \resumeItem{Worked on a 4-member team project to do whole-system verification, \textbf{an in-house memory} system, \newline a large design to do arbitration on transactions of dozens of HW clients to DDR;\newline we built an unified and flexible verification platform by UVM and I was responsible for\newline a Bus Functional module (BFM) on in-house data bus protocol, designing functional test patterns by\newline top-level sequences, and to design a user-friendly GUI for easy to use}
-            \resumeItem{I was responsible for coordinating the co-workers who worked on Peripharals, includes USB, ETN,\newline PCI-E, SATA, Flash controllers and Card readers, to integrate the testbenches of peripharal modules\newline into the verification platform introduced above}
-            \resumeItem{Ported the testbenches from vendor and discussed issues of the testbenches with engineers of the vendor,\newline for verification of revision on USB and PCI-E IPs}
-            \resumeItem{Built a parameterized testbench to verify \textbf{wrappers of hardware modules (if it has)} on all bus protocols\newline used in our ICs includes in-house register/data buses and Arm AMBA, also by master/slave supported}
-            \resumeItem{Verified control GPIOs shared by different hardware clients; designed a flow to update testcases automatically\newline according many combinations and revisions on the SPEC}
-            \resumeItem{Wrote testcases by C language for the above-mentioned modules to be verified which is for\newline bring up \textbf{tested chip} be embedded on a demo board}
+            \resumeItem{Worked on various digital Home products, e.g., \textbf{Set-up box}, \textbf{NAS}, etc}
+            \resumeItem{I was responsible for testing High-Speed peripherals by SystemVerilog VMM/UVM methodologies,\newline including \textbf{USB} from 1.0 to 3.0 in both of hosts and devices and\newline \textbf{Ethernet} supporting media-independent interfaces include MII/GMII/RMII/RGMII}
+            
+            \resumeItem{Worked with the Hardware System Design group to verify ROM code for USBs,\newline including testing for hardware security to enable USB booting following mass storage protocols\newline between PC hosts and USB modules and writing USB data to different flash types or DDR}
+            
+            \resumeItem{Worked as part of a 4-member team to do a whole-system verification for \textbf{an in-house memory system},\newline the system does arbitration on transactions for dozens of HW clients to DDR.\newline We designed a unified and flexible verification platform by UVM, replacing HW clients with\newline Bus Functional Modules (BFMs) of common bus protocols. I was responsible for\newline the BFM of in-house data bus protocol, designing functional test patterns by using top-level sequences,\newline and designing a user-friendly GUI for easy to use}
+            
+            \resumeItem{I was responsible for coordinating a team who worked on peripherals, including USB, Ethernet, PCI-E, SATA,\newline flash controllers and card readers and integrating the peripherals module testbenches into the verification platform}
+
+            \resumeItem{Worked with and described to vendors issues with their testbenches for\newline the verification of the revision on USB and PCI-E IPs}
+            
+            \resumeItem{Designed a parameterized testbench to verify master/slave supported \textbf{wrappers of hardware modules} on\newline all bus protocols including in-house register/data buses and Arm AMBA}
+            
+            \resumeItem{Verified control GPIOs shared by different hardware clients; designed a flow to update test cases automatically\newline according to various combinations and revisions on the SPEC}
+            
+            \resumeItem{Wrote test cases using C language for the above-mentioned modules to verify \textbf{test chips}\newline embedded on a demo board}
+            
             \vspace{-14pt}
         \resumeItemListEnd
   \resumeSubHeadingListEnd
@@ -219,44 +244,27 @@
     {{\textbf{\large{DT/HPC1, MediaTek}} \href{https://www.mediatek.com/}{\raisebox{-0.1\height}\faExternalLink }} $|$ \large{Arm CPU verification internship}}{July 2011 -- Aug 2011}
     \vspace{-18pt}
       \resumeItemListStart
-        \resumeItem{\normalsize{Wrote test patterns in assembly code to verify an in-house processor\newline which supports ARMv7-A instruction set}}
+        \resumeItem{\normalsize{I was responsible for writing test patterns in assembly code to verify an in-house processor\newline which supports ARMv7-A instruction set}}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
-\vspace{-16pt}
+\vspace{-14pt}
 
 
 %目前我正在修習從業界轉教職的成大資工老師，黃敬群老師，開的基於UCB CS Computer Architecture 2021 Spring的課程, 並完成該課程的project.
-%-----------PROJECTS-----------
-\section{PROJECTS}
-    {The first Two projects were came from courses taught by the Linux kernel expert, \textbf{jserv} \href{http://wiki.csie.ncku.edu.tw/User/jserv}{\raisebox{-0.1\height}\faExternalLink}}
+%-----------Off-the-Job Training-----------
+\section{OFF-THE-JOB TRAINING}
+    {Currently completing the Computer Architecture based by RISC-V and Linux Kernel Design courses\newline ran by the Linux kernel expert, \textbf{Jim Huang} \href{http://wiki.csie.ncku.edu.tw/User/jserv}{\raisebox{-0.1\height}\faExternalLink}}
     \vspace{-14pt}
     \resumeSubHeadingListStart
         \resumeProjectHeading
-          {{\textbf{\large{\underline{Computer Architecture based by RISC-V}}} \href{http://wiki.csie.ncku.edu.tw/arch/schedule}{\raisebox{-0.1\height}\faExternalLink }} $|$ \large{Assembly, C++ Used}}{Nov 2021 - Present}
-          \resumeItemListStart
+          {{\textbf{\large{\underline{Computer Architecture based by RISC-V}}} \href{http://wiki.csie.ncku.edu.tw/arch/schedule}{\raisebox{-0.1\height}\faExternalLink}} $|$ \large{Assembly, C++ used}}{Nov 2021 - Present}
             \resumeItem{The course is based on \textcolor{accent} {\href{https://cs61c.org/fa21/} {\underline{\normalsize{CS 61C at UC Berkeley, CS152/252: Computer Architecture}}}}}
-            \resumeItem{My study notes: \textcolor{accent} {\href{https://hackmd.io@asahsieh/ca-fa21} {\underline{\normalsize{https://hackmd.io@asahsieh/ca-fa21}}}} $|$}\newline {Homeworks: \textcolor{accent} {\href{https://github.com/asahsieh/ca-fa21_taught_by_jserv} {\underline{\normalsize{https://github.com/asahsieh/ca-fa21-taught-by-jserv}}}}}
-            %\href{https://hackmd.io/@asahsieh}{\raisebox{-0.2\height}\faBook\ \underline{asahsieh}}
-            %https://hackmd.io/@asahsieh/ca-fa21/
-          \resumeItemListEnd 
-        \vspace{-14pt}
+        \vspace{-10pt}
         \resumeProjectHeading
-          {{\textbf{\large{\underline{Linux Kernel Design}}} \href{https://hackmd.io/@asahsieh/linux_kernel}{\raisebox{-0.1\height}\faExternalLink }} $|$ \large{C/C++ Used}}{Sep 2021 - Present}
-          \resumeItemListStart
+          {{\textbf{\large{\underline{Linux Kernel Design}}} \href{https://hackmd.io/@asahsieh/linux_kernel}{\raisebox{-0.1\height}\faExternalLink }} $|$ \large{C/C++ used}}{Sep 2021 - Present}
             \resumeItem{The course covers that going deep on C language based on the \textcolor{accent} {\href{https://csapp.cs.cmu.edu/} {\underline{\normalsize{CS:APP3e}}}} and
             on the Linux Kernel\newline on the book \textcolor{accent} {\href{https://sysprog21.github.io/lkmpg/?fbclid=IwAR2_2G0TwJpx3uiIafaLAxKUVLz_7FIem0lqw8Up59qlplgOZZmqiXHtTGY} {\underline{\normalsize{The Linux Kernel Module Programming Guide (LKMPG) revised}}}}}
-            \resumeItem{My study notes: \textcolor{accent} {\href{https://hackmd.io/@asahsieh/linux_kernel} {\underline{\normalsize{https://hackmd.io/@asahsieh/linux-kernel}}}} $|$}\newline {Homeworks: \textcolor{accent} {\href{https://github.com/asahsieh/inux-kernel-internals} {\underline{\normalsize{https://github.com/asahsieh/linux-kernel-internals}}}}}
-          \resumeItemListEnd
-          \vspace{-13pt}
-          \resumeProjectHeading
-          {{\textbf{\large{\underline{MotionPro}}} \href{https://hackmd.io/motion-pro}{\raisebox{-0.1\height}\faExternalLink }} $|$ \large{\underline{Motion Detection, Stepper motor, Zoom lens, ...}}}{July 2016}
-          \resumeItemListStart
-            \resumeItem{\normalsize{A camera that can detect one of surfers who is catching a wave and no tag wearing required. }}
-            \resumeItem{\normalsize{this project came from one of my habit, surfing}}
-            \resumeItem{\normalsize{the project is on the stage of algorithm development, was paused on mechanism (\textbf{OpenCV}) study }}
-          \resumeItemListEnd
     \resumeSubHeadingListEnd
-\vspace{-12pt}
 
 
 %------RELEVANT COURSEWORK-------
@@ -279,51 +287,61 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {National Chiao Tung University \href{https://www.nctu.edu.tw/en}{\raisebox{-0.1\height}\faExternalLink}}{Sep 2008 -- Dec 2013}
-      {Master of Computer Science $\sbullet[.75]$ GPA: 3.1}{Hsinchu City, Taiwan}
-      
-      {Research topics in \textbf{Computer System Lab} directed by Prof. Chung-Ping Chung) \href{https://www.cs.nycu.edu.tw/members/detail/cpchung)}{\raisebox{-0.1\height}\faExternalLink}}:
-      \vspace{-5pt}
+      {Master of Computer Science}
       \resumeItemListStart
-      \resumeItem{Mechanisms to accommodate software diversity in chip multiprocessors}
-      \resumeItem{(master’s thesis) Adaptive Cache Replacement Policies for High Hit Rate of a Cache of Base Register}
+        \resumeItem{Master thesis: Adaptive Cache Replacement Policies for High Hit Rate of a Cache of Base Register}
+        \resumeItem{Mater research: Mechanisms to accommodate software diversity in chip multiprocessors}
+        \resumeItem{Teaching Assistant for the computer Architecture, Computer Organization and Embedded System Design course}
       \resumeItemListEnd
-      {Extensive project on App developement; a industry-academia cooperation with Foxlink \href{https://www.foxlink.com/}{\raisebox{-0.1\height}\faExternalLink}:}\newline
-      {The app is running on Android 1.0 to 1.1, assisting User to post articles to major Blogs with a UI}\newline
-      {Work. Exp.: as Teacher Assistant for computer Architecture, Computer Organization and\newline Embedded System Design}
   \resumeSubHeadingListEnd
   \vspace{-16pt}
   \resumeSubHeadingListStart
     \resumeSubheading
       {National Chung Cheng University \href{https://www.ccu.edu.tw/eng/index.php}{\raisebox{-0.1\height}\faExternalLink}}{July 2008 -- Sep 2008}
-      {Master of Computer Science}{Minxiong Township, Chiayi County, Taiwan}
-      
-      {2-month training in \textbf{SOC lab} directed by Prof. Tien-Fu Chen \href{https://www.cs.ccu.edu.tw/~chen/}{\raisebox{-0.1\height}\faExternalLink}}:\newline
-      Implemented a pre-synthesis 5-stage pipeline ARM processor by Verilog
+      {Summer vacation training in the SOC lab implementing a pre-synthesis 5-stage pipeline ARM processor by Verilog}
   \resumeSubHeadingListEnd
   \vspace{-16pt}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Chung Yuan Christian University \href{https://www.cycu.edu.tw/eng/}{\raisebox{-0.1\height}\faExternalLink}}{Sep 2004 -- July 2008}
-      {Bachelor of Computer Science $\sbullet[.75]$ GPA: 3.5 }{Zhongli District, Taoyuan City, Taiwan}
+      {Chung Yuan Christian University \href{https://www.cycu.edu.tw/eng/}{\raisebox{-0.1\height}\faExternalLink}}{Sep 2004 -- July 2008}{Bachelor of Computer Science}
       
-      High scores on related courses:
+      Courses included:
       \vspace{-5pt}
       \resumeItemListStart
       \resumeItem{Computer organization: A+}
       \resumeItem{Logic circuit design experiment, which to implement CPUs on FPGA: A+}
+      \resumeItem{Independent study on VLSI design automation, the topic: Rectilinear Steiner Routing Problem with Obstacles in Multiple Layers}
       \resumeItemListEnd
       Honor: Dean's List on 2006 (1st senior year)
   \resumeSubHeadingListEnd
 \vspace{-16pt}
 
+%status
+
 %-----------INVOLVEMENT---------------
 \section{EXTRACURRICULAR}
     \resumeSubHeadingListStart
-        \resumeSubheading{Organization Name \href{Certificate Proof link}{\raisebox{-0.1\height}\faExternalLink } }{MM YYYY -- MM YYYY}{\underline{Role}}{Location}
+        \resumeProjectHeading
+          {{\textbf{\large{\underline{MotionPro}}} \href{https://hackmd.io/motion-pro}{\raisebox{-0.1\height}\faExternalLink }} $|$ \large{\underline{Motion Detection, Stepper motor, Zoom lens, ... used}}}{July 2016 -- Present}
+          A project that came from my love of surfing. I tried to design a camera that can detect\newline one of surfers who is catching a wave \textbf{without wearing tags}
+        \vspace{-18pt}
+        \resumeProjectHeading
+          {{\textbf{\large{\underline{Surf \& house}}} \href{https://www.surfhouse.tw/}{\raisebox{-0.1\height}\faExternalLink }}}{Oct. 2021 -- Present}
+          {Part-time job}
+          \vspace{-5pt}
             \resumeItemListStart
-                \resumeItem{\normalsize{About the role \textbf{and responsibilities carried out.}}}
-                \resumeItem{\normalsize{Participation Certificate. \href{ParticipationCertificateLink.com}{\raisebox{-0.1\height}\faExternalLink }}}
+                \resumeItem{Class C surfing coach license from the Chinese Taipei Exploration Exercise Association}
+                \resumeItem{Designed and taught surfing courses to beginners}
             \resumeItemListEnd
+        \vspace{-16pt}    
+        \resumeProjectHeading
+         {{\textbf{\large{\underline{Ramen Kikkou}}} \href{https://goo.gl/maps/6Gfw4KYR6en3mU5x7}{\raisebox{-0.1\height}\faExternalLink }}}{Dec. 2021 -- Present}
+         {Part-time job}
+         \vspace{-5pt}
+            \resumeItemListStart
+                \resumeItem{Assisted the chef in making various ramen dishes}
+                \resumeItem{Assisted with service in the restaurant}
+            \resumeItemListEnd    
     \resumeSubHeadingListEnd
  \vspace{-11pt}
  
@@ -343,21 +361,4 @@
 %$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com}{NodeJS with Express \& MongoDB - Udemy}} \\
 
 %\end{document}
-
-
- %-----------FUN FACTS---------------
-\section{FUN FACTS}
-
-$\sbullet[.75] \hspace{0.1cm}$ {\href{certificateLink.com}{ReactJS \& Redux - Udemy}} \hspace{1.6cm}
-$\sbullet[.75] \hspace{0.1cm}$ {\href{certificateLink.com}{Java}} \hspace{2.59cm}
-$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com} {Command Line in Linux - Coursera}}\\
-
-$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com}{Python for Data Science - XIE}} \hspace{1cm}
-$\sbullet[.75] \hspace{0.1cm}$ {\href{certificateLink.com}{SQL}} \hspace{2.6cm}
-$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com}{Microsoft AI Classroom - Microsoft}} \\
-
-$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com}{\textbf{5 Stars} in \textbf{C++} \& \textbf{SQL} \href{certificateLink.com}{\raisebox{-0.1\height}\faExternalLink }}}\hspace{1.45cm}
-$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com}{MongoDB Basics}} \hspace{0.5cm}
-$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com}{NodeJS with Express \& MongoDB - Udemy}} \\
-
 \end{document}
